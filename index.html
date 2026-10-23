@@ -45,36 +45,53 @@
     </header>
 
     <main>
-        \<article>
+    <article>
         <img src="imagem-blog-png" alt="Layout do site Beleza em Cachos em vinho e rosé">
-        <div> <h2>Meu Primeiro Post</h2>
-        <p>Sejam bem-vindos (as) ao Beleza em Cachos, aqui voce vai encontrar e aprender como  deixar seus cachos maravilhosos</p>
-        <p>por: Isabela</p>
-        <button>🎀​ <span>0 </span></button>
-        <button>​✨​ <span>0</span></button>
-    </div>
+        <div> 
+            <h2>Meu Primeiro Post</h2>
+            <p>Sejam bem-vindos (as) ao Beleza em Cachos, aqui você vai encontrar e aprender como deixar seus cachos maravilhosos</p>
+            <p>Por: Isabela</p>
+            <!-- Adicionada a classe btn-reacao -->
+            <button class="btn-reacao" aria-label="Curtir com laço">🎀 <span>0</span></button>
+            <button class="btn-reacao" aria-label="Curtir com brilhos">✨ <span>0</span></button>
+        </div>
     </article>
     
     <article> 
-<img src="imagem-blog-png" alt="Layout do site Belexa em Cachos vinho e rosé destancando os titulos">
-<div>
-    <h2> Descobrindo o poder dos seus cachos</h2>
-    <p> Aqui, voce desobre a beleza e o poder do seu cabelo, aprendendo a cuidar e finalizar do jeito que voce gosta</p>
-    <p class="">Por: Isabela Fernandes</p>
-    <button>🎀​ <span>0</span></button>
-    <button>✨ <span>0</span>​</button>
-</div>
-</article>
-        
+        <img src="imagem-blog-png" alt="Layout do site Beleza em Cachos vinho e rosé destacando os títulos">
+        <div>
+            <h2>Descobrindo o poder dos seus cachos</h2>
+            <p>Aqui, você descobre a beleza e o poder do seu cabelo, aprendendo a cuidar e finalizar do jeito que você gosta</p>
+            <p>Por: Isabela Fernandes</p>
+            <!-- Adicionada a classe btn-reacao -->
+            <button class="btn-reacao" aria-label="Curtir com laço">🎀 <span>0</span></button>
+            <button class="btn-reacao" aria-label="Curtir com brilhos">✨ <span>0</span></button>
+        </div>
+    </article>
 </main>
 
+<section style="text-align: center; margin-top: 20px;">
+    <h3>Seja bem-vindo(a) ao Beleza em Cachos!</h3>
+    <p>Aqui cuidados e inspiração para valorizar a beleza cacheada.</p>
+</section>
 
-    
 </body>
 </html>
 
+<!-- Script que ativa a contagem dos botões -->
+<script>
+    // Seleciona todos os botões de reação da página
+    const botoes = document.querySelectorAll('.btn-reacao');
 
+    botoes.forEach(botao => {
+        botao.addEventListener('click', () => {
+            // Encontra o número (span) de dentro do botão que foi clicado
+            const contadorSpan = botao.querySelector('span');
+            
+            // Pega o valor atual, transforma em número e soma + 1
+            let quantidadeAtual = parseInt(contadorSpan.textContent);
+            contadorSpan.textContent = quantidadeAtual + 1;
+        });
+    });
+</script>
 
- 
-
-Seja bem-vindo(a) ao Beleza em Cachos!Aqui cuidados e inspiração para valorizar a beleza cacheada.
